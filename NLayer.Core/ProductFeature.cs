@@ -14,5 +14,6 @@ namespace NLayer.Core
         public int Width { get; set; }
         // Foreign Key
         public int ProductId { get; set; }
+        public Product Product { get; set; }
     }
 }
