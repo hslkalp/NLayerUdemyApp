@@ -14,7 +14,7 @@ namespace NLayer.Repository.Repositories
         // ctor da set edilmesi için readonly
         protected readonly AppDbContext _context;
         private readonly DbSet<T> _dbset;
-        public GenericRepository(AppDbContext context, DbSet<T> dbset)
+        public GenericRepository(AppDbContext context)
         {
             _context = context;
             _dbset = _context.Set<T>();
