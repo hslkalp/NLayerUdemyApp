@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLayer.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,7 +15,7 @@ namespace NLayer.Core.Services
         Task<T> GetByIdAsync(int id);
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
         Task<T> AddAsync(T entity);
-        Task<T> AddRangeAsync(IEnumerable<T> entities);
+        Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities);
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
         Task UpdateAsync(T entity);
         Task RemoveAsync(T entity);
